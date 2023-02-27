@@ -4,7 +4,7 @@ import * as chai from 'chai';
 import chaiHttp = require('chai-http');
 import {ITeam} from '../services/interfaces/ITeam'
 
-import { app } from '../app';
+import { App, app } from '../app';
 import Example from '../database/models/ExampleModel';
 
 import { Response } from 'superagent';
@@ -19,6 +19,7 @@ describe('Service Teams test', () => {
   afterEach(function () {
     Sinon.restore()
   })
+  const app = new App()
 
   it('Retorna com sucesso todos os times corretamente', async function () {
     const mock:
@@ -40,6 +41,10 @@ describe('Service Teams test', () => {
     const service = new TeamsService();
     const result = service.getAll;
     expect(result).to.be.equal(mock)
+  })
+
+  it('Teams controller', async function () {
+    const response = await chai.request(app.app).post('/teams')
   })
   /**
    * Exemplo do uso de stubs com tipos
