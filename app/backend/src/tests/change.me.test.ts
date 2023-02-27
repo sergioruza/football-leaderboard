@@ -1,18 +1,45 @@
-import * as sinon from 'sinon';
+import Sinon, * as sinon from 'sinon';
 import * as chai from 'chai';
 // @ts-ignore
 import chaiHttp = require('chai-http');
+import {ITeam} from '../services/interfaces/ITeam'
 
 import { app } from '../app';
 import Example from '../database/models/ExampleModel';
 
 import { Response } from 'superagent';
+import { Model } from 'sequelize';
 
 chai.use(chaiHttp);
 
 const { expect } = chai;
 
-describe('Seu teste', () => {
+describe('Service Teams test', () => {
+  afterEach(function () {
+    Sinon.restore()
+  })
+
+  it('Retorna com sucesso todos os times corretamente', async function () {
+    const mock: /* It's a type definition. */
+    ITeam[] = [
+      {
+        id: 1,
+        teamName: "Avaí/Kindermann"
+      },
+      {
+        id: 2,
+        teamName: "Bahia"
+      },
+      {
+        id: 3,
+        teamName: "Botafogo"
+      },
+    ]
+    sinon.stub(Model, 'findAll').resolves(mock)
+    const service = new TeamService();
+    const result = service.getAll();
+    expect(result).to.be.equal(mock)
+  })
   /**
    * Exemplo do uso de stubs com tipos
    */
