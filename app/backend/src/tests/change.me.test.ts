@@ -1,4 +1,4 @@
-import Sinon, * as sinon from 'sinon';
+import Sinon from "sinon"
 import * as chai from 'chai';
 // @ts-ignore
 import chaiHttp = require('chai-http');
@@ -9,6 +9,7 @@ import Example from '../database/models/ExampleModel';
 
 import { Response } from 'superagent';
 import { Model } from 'sequelize';
+import TeamsService from '../services/TeamsService'
 
 chai.use(chaiHttp);
 
@@ -20,7 +21,7 @@ describe('Service Teams test', () => {
   })
 
   it('Retorna com sucesso todos os times corretamente', async function () {
-    const mock: /* It's a type definition. */
+    const mock:
     ITeam[] = [
       {
         id: 1,
@@ -36,8 +37,8 @@ describe('Service Teams test', () => {
       },
     ]
     sinon.stub(Model, 'findAll').resolves(mock)
-    const service = new TeamService();
-    const result = service.getAll();
+    const service = new TeamsService();
+    const result = service.getAll;
     expect(result).to.be.equal(mock)
   })
   /**
