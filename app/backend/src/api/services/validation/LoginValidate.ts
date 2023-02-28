@@ -5,7 +5,7 @@ import login from './Schema';
 const validateLogin = (info: ILogin) => {
   const { error } = login.validate(info);
 
-  if (error) throw new GenericError(error.message, 420);
+  if (error) throw new GenericError('Invalid email or password', 401);
 
   return true;
 };
