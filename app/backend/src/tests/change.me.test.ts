@@ -38,7 +38,7 @@
 //         teamName: "Botafogo"
 //       },
 //     ]
-//     Sinon.stub(Team, 'findAll').resolves(mock)
+//     Sinon.stub(Team, 'findAll').resolves(mock as Team[])
 //     const service = new TeamsService();
 //     const result = service.getAll;
 //     expect(result).to.be.equal(mock)
@@ -73,7 +73,7 @@
 //   //   expect(...)
 //   // });
 
-//   it('Seu sub-teste', () => {
-//     expect(false).to.be.eq(true);
-//   });
+//   // it('Seu sub-teste', () => {
+//   //   expect(false).to.be.eq(true);
+//   // });
 // });

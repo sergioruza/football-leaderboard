@@ -42,7 +42,7 @@ describe('Service Teams test', () => {
     {
       id: 1, teamName: 'Avaí/Kindermann'
     };
-    // Sinon.stub(Model, 'findAll').resolves(m)
+    // Sinon.stub(Team, 'findAll').resolves(mock)
     const response = await chai.request(app).get('/teams/1');
     expect(response.status).to.be.equal(200);
     expect(response.body).to.be.equal(mock)
