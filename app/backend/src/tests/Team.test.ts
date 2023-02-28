@@ -6,6 +6,7 @@ import { ITeam } from "../api/services/interfaces/ITeam";
 import { app } from "../app";
 import * as chai from 'chai';
 import Team from "../database/models/TeamModel";
+import { Model } from "sequelize";
 chai.use(chaiHttp)
 
 describe('Service Teams test', () => {
@@ -33,6 +34,18 @@ describe('Service Teams test', () => {
     const response = await chai.request(app).get('/teams').send(mock);
     expect(response.status).to.be.equal(200);
     // expect(response.body).to.be.equal(mock)
+  })
+
+  it('Retorna o time correto na busca por id', async function () {
+    const mock:
+      ITeam =
+    {
+      id: 1, teamName: 'Avaí/Kindermann'
+    };
+    // Sinon.stub(Model, 'findAll').resolves(m)
+    const response = await chai.request(app).get('/teams/1');
+    expect(response.status).to.be.equal(200);
+    expect(response.body).to.be.equal(mock)
   })
 });
 
