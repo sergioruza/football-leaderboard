@@ -2,11 +2,9 @@ import { expect } from "chai";
 // @ts-ignore
 import chaiHttp = require('chai-http');
 import * as Sinon from "sinon";
-import User from "../database/models/UserModel";
 import { app } from "../app";
 import * as chai from 'chai';
-import Team from "../database/models/TeamModel";
-import { Model } from "sequelize";
+
 chai.use(chaiHttp)
 
 describe('Login test', () => {
