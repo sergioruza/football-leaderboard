@@ -11,7 +11,6 @@ describe('Login test', () => {
   afterEach(function () {
     Sinon.restore()
   })
-  // const app = new App()
 
   it('Retorna o token', async function () {
     // Sinon.stub(Team, 'findAll').resolves(mock)
