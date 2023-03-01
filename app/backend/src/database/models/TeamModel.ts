@@ -1,5 +1,6 @@
 import { STRING, INTEGER, Model } from 'sequelize';
 import db from '.';
+// import Match from './MatchModel';
 
 class Team extends Model {
   declare readonly id: number;
@@ -23,5 +24,7 @@ Team.init({
   underscored: true,
   modelName: 'teams',
 });
+
+// Team.hasMany(Match, { foreignKey: 'home_team_id', as: 'homeTeamId' });
 
 export default Team;
