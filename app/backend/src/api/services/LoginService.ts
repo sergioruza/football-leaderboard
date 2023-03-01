@@ -26,4 +26,11 @@ export default class Login implements IServiceLogin {
     if (!passwordValid) throw new GenericError('Invalid email or password', 401);
     return generateToken(payload);
   }
+
+  async getRole(info: UserToken): Promise<string> {
+    const user = await this.model.findByPk(info.id);
+    if (!user) throw new GenericError('User not found', 404);
+    // console.log(user.dataValues.role);
+    return user.dataValues.role;
+  }
 }
