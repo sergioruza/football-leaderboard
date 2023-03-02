@@ -24,4 +24,10 @@ router.patch(
   (req: Request, res: Response) => matchesController.putGoals(req, res),
 );
 
+router.post(
+  '/matches',
+  authToken,
+  (req: Request, res: Response) => matchesController.createMatches(req, res),
+);
+
 export default router;

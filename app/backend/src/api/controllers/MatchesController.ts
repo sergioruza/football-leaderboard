@@ -35,4 +35,11 @@ export default class MatchesController {
     const result = await this._service.putGoals(info, Number(id));
     res.status(200).json(result);
   }
+
+  async createMatches(req: Request, res: Response) {
+    const info = req.body;
+    const result = await this._service.createMatches(info);
+
+    res.status(201).json(result);
+  }
 }
