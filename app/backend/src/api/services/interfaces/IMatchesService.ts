@@ -15,4 +15,5 @@ export type IMatcher = {
 
 export interface IMatchesService {
   getAll(): Promise<IMatcher[]>
+  getByQuery(query: string): Promise<IMatcher[]>
 }
