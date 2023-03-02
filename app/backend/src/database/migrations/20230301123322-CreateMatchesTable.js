@@ -4,7 +4,7 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('matches', {
       id: {
-        autoIncremente: true,
+        autoIncrement: true,
         type: Sequelize.INTEGER,
         primaryKey: true,
         allowNull: false,
