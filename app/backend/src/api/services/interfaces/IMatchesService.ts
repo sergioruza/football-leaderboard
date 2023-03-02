@@ -18,10 +18,30 @@ export type infoPutMatche = {
   awayTeamGoals: number,
 };
 
+export type infoCreateMatche = {
+  homeTeamId: number,
+  awayTeamId: number,
+  homeTeamGoals: number,
+  awayTeamGoals: number,
+};
+
+export type matcheCreated = {
+  id: number,
+  homeTeamId: number,
+  homeTeamGoals: number,
+  awayTeamId: number,
+  awayTeamGoals: number,
+  inProgress: true,
+};
+
 export interface IMatchesService {
   getAll(): Promise<IMatcher[]>
+
   getByQuery(query: string): Promise<IMatcher[]>
   finishMatches(id: number): Promise<string>
+
   putGoals({ homeTeamGoals, awayTeamGoals }: infoPutMatche,
     id: number): Promise<{ message: 'updated goals' }>
+
+  createMatches(info: infoCreateMatche): Promise<matcheCreated>
 }
