@@ -1,4 +1,4 @@
-import { Model, INTEGER, BOOLEAN, INET } from 'sequelize';
+import { Model, INTEGER, BOOLEAN } from 'sequelize';
 import db from '.';
 import Team from './TeamModel';
 
@@ -52,7 +52,7 @@ Match.init({
   modelName: 'matches',
 });
 
-Team.hasMany(Match, { foreignKey: 'away_team_id', as: 'awayTeamId' });
-Team.hasMany(Match, { foreignKey: 'home_team_id', as: 'homeTeamId' });
-Match.belongsTo(Team, { foreignKey: 'away_team_id', as: 'awayTeamId' });
-Match.belongsTo(Team, { foreignKey: 'home_team_id', as: 'homeTeamId' });
+Match.belongsTo(Team, { foreignKey: 'away_team_id', as: 'awayTeam' });
+Match.belongsTo(Team, { foreignKey: 'home_team_id', as: 'homeTeam' });
+Team.hasMany(Match, { foreignKey: 'id', as: 'matchAwayId' });
+Team.hasMany(Match, { foreignKey: 'id', as: 'matchHomeId' });
