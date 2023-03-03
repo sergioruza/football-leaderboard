@@ -69,17 +69,17 @@ const mockFindFalse = [
     }
   }
 ]
-describe('matches test', () => {
+describe.only('matches test', () => {
   afterEach(function () {
     Sinon.restore()
   })
 
   it('Retorna com sucesso', async function () {
-    // Sinon.stub(Match, 'findAll').resolves(mockfindAll as unknown as Match[])
+    Sinon.stub(Match, 'findAll').resolves(mockfindAll as unknown as Match[])
     // Sinon.stub(Team, 'findAll').resolves(mock)
     const response = await chai.request(app).get('/matches')
     expect(response.status).to.be.equal(200);
-    expect(response.body).to.be.equal(mockfindAll)
+    expect(response.body).to.be.deep.equal(mockfindAll)
   })
 
   it('Retorna partidas encerradas', async function () {
@@ -87,7 +87,7 @@ describe('matches test', () => {
 
     const response = await chai.request(app).get('/matches?inProgress=false')
     expect(response.status).to.be.equal(200);
-    expect(response.body).to.be.equal(mockFindFalse)
+    expect(response.body).to.be.deep.equal(mockFindFalse)
   })
 
   // it('Retorna o role do User', async function () {
