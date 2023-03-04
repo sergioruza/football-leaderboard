@@ -6,6 +6,7 @@ export interface ILearderBoard {
   totalLosses(): void
   teamUtilization(): void
   calculateGoals(): void
+  matchWins(): void
   teamRanking(): void
   leaderBoard(): void
 }
