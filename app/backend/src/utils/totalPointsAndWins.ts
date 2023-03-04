@@ -6,19 +6,19 @@ export default (id: number, matchWins: IMatchWins[]) => {
   let losses = 0;
 
   matchWins.forEach((e) => {
-    if (e.wins === id) {
+    if (e.win === id) {
       wins += 1;
       points += 3;
     }
 
-    if (e.wins === 'draw') {
+    if (e.win === 'draw') {
       points += 1;
     }
 
-    if (e.wins !== id && e.wins !== 'draw') {
-      losses += losses;
+    if (e.win !== id && e.win !== 'draw') {
+      losses += 1;
     }
   });
 
-  return { wins, points };
+  return { wins, points, losses };
 };
