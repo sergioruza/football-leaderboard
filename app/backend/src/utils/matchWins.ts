@@ -3,15 +3,15 @@ import { IMatcher } from '../api/services/interfaces/IMatchesService';
 export default (allMatches: IMatcher[]) => {
   const wins = allMatches.map((e) => {
     if (e.awayTeamGoals > e.homeTeamGoals) {
-      return { ...e, win: e.awayTeamId };
+      e.win = e.awayTeamId;
+      return e;
+    } if (e.homeTeamGoals > e.awayTeamGoals) {
+      e.win = e.homeTeamId;
+      return e;
     }
-
-    if (e.homeTeamGoals > e.awayTeamGoals) {
-      return { ...e, win: e.homeTeamId };
-    }
-
-    return { ...e, win: 'draw' };
+    e.win = 'draw';
+    return e;
   });
-
+  // console.log(wins[10]);
   return wins;
 };
