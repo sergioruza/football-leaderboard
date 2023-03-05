@@ -20,7 +20,7 @@ export default class LeaderBoardService implements ILearderBoard {
   }
 
   async classification(): Promise<IInfoLeaderboard[]> {
-    const allMatches = await this._match.getAll();
+    const allMatches = (await this._match.getAll()).filter((e) => !e.inProgress);
     const allTeams = await this._team.getAll();
     return allTeams.map((e) => {
       const matchWinsL = matchWins(allMatches);

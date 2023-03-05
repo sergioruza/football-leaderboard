@@ -1,6 +1,7 @@
-import { IMatchWins } from './interface/IMatchWins';
+import { IMatcher } from '../api/services/interfaces/IMatchesService';
+// import { IMatchWins } from './interface/IMatchWins';
 
-export default (matchWins: IMatchWins[]) => {
+export default (matchWins: IMatcher[]) => {
   let draws = 0;
   matchWins.forEach((e) => {
     if (e.win === 'draws') {

@@ -1,9 +1,8 @@
-import { IMatchWins } from './interface/IMatchWins';
+import { IMatcher } from '../api/services/interfaces/IMatchesService';
 
-export default (id: number, matchWins: IMatchWins[]) => {
+export default (id: number, matchWins: IMatcher[]) => {
   let wins = 0;
   let points = 0;
-  let losses = 0;
 
   matchWins.forEach((e) => {
     if (e.win === id) {
@@ -14,11 +13,7 @@ export default (id: number, matchWins: IMatchWins[]) => {
     if (e.win === 'draw') {
       points += 1;
     }
-
-    if (e.win !== id && e.win !== 'draw') {
-      losses += 1;
-    }
   });
 
-  return { wins, points, losses };
+  return { wins, points };
 };

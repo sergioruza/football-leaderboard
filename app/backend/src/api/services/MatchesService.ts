@@ -28,7 +28,6 @@ export default class MatchesService implements IMatchesService {
       attributes: { exclude: ['away_team_id', 'home_team_id'] },
 
     });
-
     return result;
   }
 

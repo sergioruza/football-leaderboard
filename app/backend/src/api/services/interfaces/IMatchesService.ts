@@ -11,6 +11,7 @@ export type IMatcher = {
   awayTeam?: {
     teamName: string,
   }
+  win?: number | string | undefined
 };
 
 export type infoPutMatche = {
