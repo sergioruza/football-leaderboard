@@ -9,7 +9,7 @@ export default (allMatches: IMatcher[]) => {
       e.win = e.homeTeamId;
       return e;
     }
-    e.win = 'draw';
+    e.win = 'draws';
     return e;
   });
   // console.log(wins[10]);

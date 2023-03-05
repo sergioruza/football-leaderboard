@@ -5,7 +5,7 @@ import TeamsService from './TeamsService';
 import totalPointsAndWins from '../../utils/totalPointsAndWins';
 import matchWins from '../../utils/matchWins';
 import totalGamesUtil from '../../utils/totalGames';
-import totalDrawsUtil from '../../utils/totalDraws';
+// import totalDrawsUtil from '../../utils/totalDraws';
 import goalsScoredUtils from '../../utils/goalsScored';
 import teamEfficiency from '../../utils/teamEfficiency';
 import losses from '../../utils/losses';
@@ -31,7 +31,7 @@ export default class LeaderBoardService implements ILearderBoard {
         totalGames,
         totalPoints: winPointsLoss.points,
         totalVictories: winPointsLoss.wins,
-        totalDraws: totalDrawsUtil(matchWinsL),
+        totalDraws: winPointsLoss.draws,
         totalLosses: losses(e.id as number, matchWinsL),
         goalsFavor: goalsScored.goalsFavor,
         goalsOwn: goalsScored.goalsConceded,
