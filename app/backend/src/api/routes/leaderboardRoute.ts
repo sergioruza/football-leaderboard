@@ -8,7 +8,7 @@ const service = new LeaderBoardService();
 const controller = new LeaderboardController(service);
 
 router.get(
-  '/leaderboard/home',
+  '/leaderboard',
   (req: Request, res: Response) => controller.getLeaderBoard(req, res),
 );
 
