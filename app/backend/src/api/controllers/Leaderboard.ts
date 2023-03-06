@@ -9,8 +9,20 @@ export default class LeaderboardController {
     this._service = service;
   }
 
+  async getLeaderBoardHome(req: Request, res: Response) {
+    const leaderboard = await this._service.classification('home');
+    const result = sortMatches(leaderboard);
+    return res.status(200).json(result);
+  }
+
+  async getLeaderBoardAway(req: Request, res: Response) {
+    const leaderboard = await this._service.classification('away');
+    const result = sortMatches(leaderboard);
+    return res.status(200).json(result);
+  }
+
   async getLeaderBoard(req: Request, res: Response) {
-    const leaderboard = await this._service.classification();
+    const leaderboard = await this._service.classification(undefined);
     const result = sortMatches(leaderboard);
     return res.status(200).json(result);
   }

@@ -19,11 +19,11 @@ export default class LeaderBoardService implements ILearderBoard {
     this._match = new MatchesService();
   }
 
-  async classification(): Promise<IInfoLeaderboard[]> {
+  async classification(filter: string | undefined): Promise<IInfoLeaderboard[]> {
     const allMatches = (await this._match.getAll()).filter((e) => !e.inProgress);
     const allTeams = await this._team.getAll();
     return allTeams.map((e) => {
-      const matchWinsL = matchWins(allMatches);
+      const matchWinsL = matchWins(allMatches, filter, e.id as number);
       const winPointsLoss = totalPointsAndWins(e.id as number, matchWinsL);
       const goalsScored = goalsScoredUtils(e.id as number, allMatches);
       const totalGames = totalGamesUtil(e.id as number, allMatches);

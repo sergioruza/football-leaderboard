@@ -1,6 +1,6 @@
 import { IMatcher } from '../api/services/interfaces/IMatchesService';
 
-export default (allMatches: IMatcher[]) => {
+export default (allMatches: IMatcher[], filter: string | undefined, id: number) => {
   const wins = allMatches.map((e) => {
     if (e.awayTeamGoals > e.homeTeamGoals) {
       e.win = e.awayTeamId;
@@ -12,7 +12,12 @@ export default (allMatches: IMatcher[]) => {
     e.win = 'draws';
     return e;
   });
-  // console.log(wins[10]);
+  if (filter === 'home') {
+    return wins.filter((e) => e.homeTeamId === id);
+  }
+  if (filter === 'away') {
+    return wins.filter((e) => e.awayTeamId === id);
+  }
   return wins;
 };
 
