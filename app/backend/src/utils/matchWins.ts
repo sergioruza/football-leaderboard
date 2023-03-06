@@ -15,3 +15,5 @@ export default (allMatches: IMatcher[]) => {
   // console.log(wins[10]);
   return wins;
 };
+
+// fix: auxilio de Richard para refatorar código com bug
