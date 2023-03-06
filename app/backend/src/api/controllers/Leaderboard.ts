@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import sortMatches from '../../utils/sortMatches';
 import LeaderBoardService from '../services/LeaderBoardService';
 
 export default class LeaderboardController {
@@ -10,6 +11,7 @@ export default class LeaderboardController {
 
   async getLeaderBoard(req: Request, res: Response) {
     const leaderboard = await this._service.classification();
-    return res.status(200).json(leaderboard);
+    const result = sortMatches(leaderboard);
+    return res.status(200).json(result);
   }
 }

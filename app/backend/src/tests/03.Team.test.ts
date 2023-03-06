@@ -13,7 +13,6 @@ describe('Service Teams test', () => {
   afterEach(function () {
     Sinon.restore()
   })
-  // const app = new App()
 
   it('Retorna com sucesso todos os times corretamente', async function () {
     const mock:
@@ -33,7 +32,6 @@ describe('Service Teams test', () => {
       ]
     const response = await chai.request(app).get('/teams').send(mock);
     expect(response.status).to.be.equal(200);
-    // expect(response.body).to.be.equal(mock)
   })
 
   it('Retorna o time correto na busca por id', async function () {
@@ -42,10 +40,8 @@ describe('Service Teams test', () => {
     {
       id: 1, teamName: 'Avaí/Kindermann'
     };
-    // Sinon.stub(Team, 'findAll').resolves(mock)
     const response = await chai.request(app).get('/teams/1');
     expect(response.status).to.be.equal(200);
-    // expect(response.body).to.be.equal(mock)
   })
 });
 
