@@ -40,3 +40,5 @@ export default class LeaderBoardService implements ILearderBoard {
     });
   }
 }
+
+// Auxílio de Arthur Debiasi
