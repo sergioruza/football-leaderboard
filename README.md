@@ -3,6 +3,14 @@
 <img src="./images/tfc.gif" alt="Uma imagem relacionada ao projeto">
 </fig>
 
+ <details>
+    <summary><strong>🏻‍❗ Resalvas</strong></summary><br />
+
+- O frontend desse projeto é de total autoria da Trybe(https://www.betrybe.com/);
+- Minha tarefa foi apenas construir o backend, a fim de se tornar uma aplicação completa;
+
+  </details>
+
 ## Inicialização
 Para executar o projeto, utilize as ferramentas descritas na sessão *Ferramentas*.
 
@@ -79,12 +87,5 @@ Respeitando a proposta, o sistema deverá atender os seguintes requisitos:
 
 </details>
 
- <details>
-    <summary><strong>🏻‍❗ Resalvas</strong></summary><br />
-
-- O frontend desse projeto é de total autoria da Trybe(https://www.betrybe.com/);
-- Minha tarefa foi apenas construir o backend, a fim de se tornar uma aplicação completa;
-
-  </details>
 
 
