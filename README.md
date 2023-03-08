@@ -55,17 +55,17 @@ Respeitando a proposta, o sistema deverá atender os seguintes requisitos:
 
 * **RF1** - Desenvolver o backend capaz de se comunicar com o frontend;
 * **RF2** - Rotas:
-                   * get /teams: Retorna todos os times;
-                   * post /login: Permite o login de acordo com regras de negócio;
-                   * get /login/role: Retorna quem é o usuário(admin ou user);
-                   * get /matches: Retorna todas as partidas de futebol criadas;
-                   * get matches?inProgress=false: Retorna todas as partidas de futebol criadas e já finalizadas;
-                   * get matches?inProgress=true: Retorna todas as partidas de futebol criadas e em andamento;
-                   * patch /matches/id/finish: Atualiza uma partida de modo que seja dada como finalizada;
-                   * patch /matches/id: Atualiza o numero de gols de uma partida em andamento;
-                   * get /leaderboard/home: Retorna os dados dos times que jogaram em casa;
-                   * get /leaderboard/away: Retorna os dados dos times que não jogaram em casa;
-                   * get /leaderboard: Retorna todos os dados de cada um dos times;
+                   * get /teams: Retorna todos os times;  
+                   * post /login: Permite o login de acordo com regras de negócio;  
+                   * get /login/role: Retorna quem é o usuário(admin ou user);  
+                   * get /matches: Retorna todas as partidas de futebol criadas;  
+                   * get matches?inProgress=false: Retorna todas as partidas de futebol criadas e já finalizadas;  
+                   * get matches?inProgress=true: Retorna todas as partidas de futebol criadas e em andamento;  
+                   * patch /matches/id/finish: Atualiza uma partida de modo que seja dada como finalizada;  
+                   * patch /matches/id: Atualiza o numero de gols de uma partida em andamento;  
+                   * get /leaderboard/home: Retorna os dados dos times que jogaram em casa;  
+                   * get /leaderboard/away: Retorna os dados dos times que não jogaram em casa;  
+                   * get /leaderboard: Retorna todos os dados de cada um dos times;  
 
 ## Finais
 <details>
