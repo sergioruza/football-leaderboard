@@ -1,6 +1,6 @@
 # <h1 align="center">⚽ football-leaderboard ⚽</h1>
 <fig>
-<img src="https://images.pexels.com/photos/7367/startup-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Uma imagem relacionada ao projeto">
+<img src="./images/tfc.gif" alt="Uma imagem relacionada ao projeto">
 </fig>
 
 ## Inicialização
@@ -54,22 +54,22 @@ O sistema é composto de um backend. Linguagem, frameworks e bibliotecas princip
 Respeitando a proposta, o sistema deverá atender os seguintes requisitos:
 
 * **RF1** - Desenvolver o backend capaz de se comunicar com o frontend;
-* **RF2** - Rotas:  
-                   * get /teams: Retorna todos os times;  
-                   * post /login: Permite o login de acordo com regras de negócio;  
-                   * get /login/role: Retorna quem é o usuário(admin ou user);  
-                   * get /matches: Retorna todas as partidas de futebol criadas;  
-                   * get matches?inProgress=false: Retorna todas as partidas de futebol criadas e já finalizadas;  
-                   * get matches?inProgress=true: Retorna todas as partidas de futebol criadas e em andamento;  
-                   * patch /matches/id/finish: Atualiza uma partida de modo que seja dada como finalizada;  
-                   * patch /matches/id: Atualiza o numero de gols de uma partida em andamento;  
-                   * get /leaderboard/home: Retorna os dados dos times que jogaram em casa;  
-                   * get /leaderboard/away: Retorna os dados dos times que não jogaram em casa;  
+* **RF2** - Rotas:
+                   * get /teams: Retorna todos os times;
+                   * post /login: Permite o login de acordo com regras de negócio;
+                   * get /login/role: Retorna quem é o usuário(admin ou user);
+                   * get /matches: Retorna todas as partidas de futebol criadas;
+                   * get matches?inProgress=false: Retorna todas as partidas de futebol criadas e já finalizadas;
+                   * get matches?inProgress=true: Retorna todas as partidas de futebol criadas e em andamento;
+                   * patch /matches/id/finish: Atualiza uma partida de modo que seja dada como finalizada;
+                   * patch /matches/id: Atualiza o numero de gols de uma partida em andamento;
+                   * get /leaderboard/home: Retorna os dados dos times que jogaram em casa;
+                   * get /leaderboard/away: Retorna os dados dos times que não jogaram em casa;
                    * get /leaderboard: Retorna todos os dados de cada um dos times;
 
 ## Finais
 <details>
- <summary><strong>:memo: Objetivos de Aprendizado</strong></summary><br /> 
+ <summary><strong>:memo: Objetivos de Aprendizado</strong></summary><br />
 
 - Construir um back-end dockerizado utilizando modelagem de dados através do Sequelize;
 
@@ -81,10 +81,10 @@ Respeitando a proposta, o sistema deverá atender os seguintes requisitos:
 
  <details>
     <summary><strong>🏻‍❗ Resalvas</strong></summary><br />
-  
+
 - O frontend desse projeto é de total autoria da Trybe(https://www.betrybe.com/);
 - Minha tarefa foi apenas construir o backend, a fim de se tornar uma aplicação completa;
-  
+
   </details>
 
 
