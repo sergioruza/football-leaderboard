@@ -31,8 +31,13 @@ $ npm run install:apps
 
 # Suba os contêineres
 $ npm run compose:up
+# backend logs
 # [nodemon] starting `ts-node ./src/server.ts dev`
-# Running on port 300?
+# Running on port 300?  
+
+# frontend logs
+#You can now view frontend in the browser.
+#  Local:            http://localhost:300?
 
 # Vá até a pasta backend e popule o banco
 $ cd app/backend
