@@ -7,7 +7,7 @@
 Para executar o projeto, utilize as ferramentas descritas na sessão *Ferramentas*.
 
 ## Ferramentas
-NPM - Gerenciador de pacotes padrão para execução do JavaScript Node.js
+* NPM - Gerenciador de pacotes padrão para execução do JavaScript Node.js
 * Docker - Conjunto de produtos de plataforma como serviço que usam virtualização de nível de sistema operacional.
 * Docker Compose - Ferramenta usada para definir e executar aplicativos de vários contêineres do Docker
 ```bash
@@ -60,11 +60,11 @@ Respeitando a proposta, o sistema deverá atender os seguintes requisitos:
                    * get /login/role: Retorna quem é o usuário(admin ou user);  
                    * get /matches: Retorna todas as partidas de futebol criadas;  
                    * get matches?inProgress=false: Retorna todas as partidas de futebol criadas e já finalizadas;  
-                   * get matches?inProgress=true: Retorna todas as partidas de futebol criadas e em andamento;
-                   * patch /matches/:id/finish: Atualiza uma partida de modo que seja dada como finalizada;  
-                   * patch /matches/:id: Atualiza o numero de gols de uma partida em andamento;  
+                   * get matches?inProgress=true: Retorna todas as partidas de futebol criadas e em andamento;  
+                   * patch /matches/id/finish: Atualiza uma partida de modo que seja dada como finalizada;  
+                   * patch /matches/id: Atualiza o numero de gols de uma partida em andamento;  
                    * get /leaderboard/home: Retorna os dados dos times que jogaram em casa;  
-                   * get /leaderboard/away: Retorna os dados dos times que não jogaram em casa;
+                   * get /leaderboard/away: Retorna os dados dos times que não jogaram em casa;  
                    * get /leaderboard: Retorna todos os dados de cada um dos times;
 
 ## Finais
@@ -78,5 +78,13 @@ Respeitando a proposta, o sistema deverá atender os seguintes requisitos:
 - Firmar conhecimentos em POO usando TypeScript;
 
 </details>
+
+ <details>
+    <summary><strong>🏻‍❗ Resalvas</strong></summary><br />
+  
+- O frontend desse projeto é de total autoria da Trybe(https://www.betrybe.com/);
+- Minha tarefa foi apenas construir o backend, a fim de se tornar uma aplicação completa;
+  
+  </details>
 
 
