@@ -44,7 +44,7 @@ $ cd npm run db:reset
 ## Introdução
 
 Este projeto possui o objetivo principal de criar o backend de uma aplicação e,
-com os objetivos gerais de firmar conhecimentos em nodeJS com Sequelize e POO.
+com os objetivos gerais de firmar conhecimentos em nodeJS com Sequelize, POO e tests.
 
 ## Análise técnica
 
@@ -57,6 +57,7 @@ O sistema é composto de um backend. Linguagem, frameworks e bibliotecas princip
 * **F3** - Sequelize.
 * **F3** - MySQL.
 * **F4** - POO com alguns pilares do SOLID.
+* **F5** - MochaJS.
 
 ### Requisitos Funcionais
 Respeitando a proposta, o sistema deverá atender os seguintes requisitos:
@@ -84,6 +85,8 @@ Respeitando a proposta, o sistema deverá atender os seguintes requisitos:
 - Respeitar regras de negócio providas no projeto;
 
 - Firmar conhecimentos em POO usando TypeScript;
+
+- Firmar conhecimentos em testes utilizando MochaJS;
 
 </details>
 
