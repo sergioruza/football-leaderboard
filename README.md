@@ -16,7 +16,7 @@ Para executar o projeto, utilize as ferramentas descritas na sessão *Ferramenta
 $ git clone git@github.com:sergioruza/football-leaderboard.git
 
 # Acesse a pasta
-$ cd footeball-leaderboard
+$ cd football-leaderboard
 
 # Instale as dependências do front-end e back-end
 $ npm run install:apps
@@ -31,7 +31,7 @@ $ cd app/backend
 $ cd npm run db:reset
 
 ```
-# footebol-leaderboard
+# football-leaderboard
 
 ## Introdução
 
