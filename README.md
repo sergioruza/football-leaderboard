@@ -21,7 +21,7 @@ Para executar o projeto, utilize as ferramentas descritas na sessão *Ferramenta
 ```bash
 
 # Faça o clone
-$ git clone git@github.com:sergioruza/ootball-leaderboard.git
+$ git clone git@github.com:sergioruza/football-leaderboard.git
 
 # Acesse a pasta
 $ cd football-leaderboard
